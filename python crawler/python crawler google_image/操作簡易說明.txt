@@ -1,0 +1,25 @@
+將會用到 Selenium 這個套件，先使用 pip 指令來安裝：
+---
+pip install Selenium
+---
+或者也可以用 conda 指令來安裝：
+---
+conda install -c conda-forge selenium
+---
+=====
+接著會使用 Webdriver 讓程式可以代替我們來控制瀏覽器，對應不同瀏覽器（e.g. Chrome、Firefox、Safari）會有不同的 Webdriver，這邊我們以 Google Cheome 來作為範例。 
+
+首先你需要先檢查你電腦裡面 Chrome 的版本，再依其版本去 [https://chromedriver.chromium.org/downloads] 下載對應的 Webdriver。
+
+​*如何查看 Chrome 版本，你可在瀏覽器中鍵入「chrome://settings/help」來查看。
+
+在環境準備完成後，就可以來使用(寫)爬蟲程式了！
+======
+SP1.首先把資料夾內的【crawler.py】與剛開始下載的 Webdriver 放在同一個資料夾(python Demo)。(可參考圖片01)
+
+SP2.使用的方法: 開啟 Command Line(windoes cmd) ，然後進入該資料夾底下(cd C:\Users\<your name>\<python Demo>)。(可參考圖片02)
+    接著運行：python crawler.py -c【圖片的類別】 -n【下載的數量】。 例如: python crawler.py -c cat -n 100 。
+
+-c 參數後面放的是你要下載的類別，e.g. dog、cat、mountain、vehicle...
+-n 參數後面填的是數量，想要下載100張就填100、想要下載2000張就填2000
+
